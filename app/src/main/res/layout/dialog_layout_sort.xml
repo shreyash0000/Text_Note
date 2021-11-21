@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/transparent">
+
+    <RelativeLayout
+        android:id="@+id/layout_root"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"
+        android:background="@android:color/transparent"
+        android:orientation="vertical">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            app:cardCornerRadius="10dp"
+            app:cardElevation="25dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="10dp"
+                    android:drawableLeft="@drawable/ic_sort"
+                    android:drawableTint="@color/gray_700"
+                    android:fontFamily="@font/roboto_regular"
+                    android:padding="10dp"
+                    android:text="  Sort "
+                    android:textColor="@color/gray_700"
+                    android:textSize="@dimen/textonetwo" />
+
+                <View
+                    android:id="@+id/line1"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@id/title"
+                    android:background="@color/gray_700"
+                    android:layout_marginLeft="@dimen/onefive"
+                    android:layout_marginRight="@dimen/onefive"/>
+
+                <TextView
+                    android:id="@+id/modify"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/line1"
+                    android:layout_centerHorizontal="true"
+                    android:layout_gravity="center_horizontal"
+                    android:drawableLeft="@drawable/ic_sort"
+                    android:drawableTint="@color/gray_700"
+                    android:fontFamily="@font/roboto_regular"
+                    android:padding="10dp"
+                    android:text="  By Modified time"
+                    android:textAlignment="center"
+                    android:textColor="@color/gray_500"
+                    android:textSize="10sp" />
+
+                <TextView
+                    android:id="@+id/created"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/modify"
+                    android:layout_centerHorizontal="true"
+                    android:layout_gravity="center_horizontal"
+                    android:drawableLeft="@drawable/ic_sort"
+                    android:drawableTint="@color/gray_700"
+                    android:fontFamily="@font/roboto_regular"
+                    android:padding="10dp"
+                    android:text="  By Created time"
+                    android:textAlignment="center"
+                    android:textColor="@color/gray_500"
+                    android:textSize="10sp" />
+
+
+                <TextView
+                    android:id="@+id/alphabetically"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/created"
+                    android:layout_centerHorizontal="true"
+                    android:layout_gravity="center_horizontal"
+                    android:drawableLeft="@drawable/ic_alpha"
+                    android:drawableTint="@color/gray_700"
+                    android:fontFamily="@font/roboto_regular"
+                    android:textColor="@color/gray_500"
+                    android:padding="10dp"
+                    android:text="  Alphabetically"
+                    android:textAlignment="center"
+                    android:textSize="10sp" />
+
+
+                <TextView
+                    android:id="@+id/reminder"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/alphabetically"
+                    android:layout_centerHorizontal="true"
+                    android:layout_gravity="center_horizontal"
+                    android:drawableLeft="@drawable/ic_sort"
+                    android:drawableTint="@color/gray_700"
+                    android:fontFamily="@font/roboto_regular"
+                    android:textColor="@color/gray_500"
+                    android:padding="10dp"
+                    android:layout_marginBottom="@dimen/onezero"
+                    android:text="by reminder time"
+                    android:textAlignment="center"
+                    android:textSize="10sp" />
+
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+
+    </RelativeLayout>
+</RelativeLayout>

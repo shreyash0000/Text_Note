@@ -1,0 +1,294 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragment.Note">
+
+    <!-- TODO: Update blank fragment layout -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <include
+            android:id="@+id/custom_header"
+            layout="@layout/custom_header"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/fourfive" />
+
+        <RelativeLayout
+            android:id="@+id/rlSort"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/custom_header"
+            android:layout_marginLeft="@dimen/five"
+            android:layout_marginTop="@dimen/three"
+            android:layout_marginRight="@dimen/five"
+            android:background="@color/gray_100">
+
+            <TextView
+                android:id="@+id/tvSortby"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:fontFamily="@font/roboto_regular"
+                android:padding="@dimen/eight"
+                android:text="Sort By Created Date"
+                android:textAlignment="center"
+                android:textColor="@color/gray_700"
+                android:textSize="@dimen/textonezero" />
+
+            <ImageView
+                android:layout_width="@dimen/twozero"
+                android:layout_height="@dimen/twozero"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/three"
+                android:layout_toRightOf="@id/tvSortby"
+                android:backgroundTint="@color/gray_700"
+                android:src="@drawable/down_arrow" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/sortRl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/rlSort"
+            android:layout_marginLeft="@dimen/five"
+            android:layout_marginRight="@dimen/five"
+            android:background="@color/gray_100"
+            android:visibility="gone">
+
+            <RelativeLayout
+                android:id="@+id/filter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true">
+
+                <TextView
+                    android:id="@+id/title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/gray_500"
+                    android:fontFamily="@font/roboto_regular"
+                    android:paddingLeft="30dp"
+                    android:paddingTop="7dp"
+                    android:paddingRight="30dp"
+                    android:paddingBottom="7dp"
+                    android:text="Sort"
+                    android:textColor="@color/gray_50"
+                    android:textSize="@dimen/textonetwo" />
+
+                <TextView
+                    android:id="@+id/view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_toRightOf="@id/title"
+                    android:background="@color/gray_500"
+                    android:fontFamily="@font/roboto_regular"
+                    android:paddingLeft="30dp"
+                    android:paddingTop="7dp"
+                    android:paddingRight="30dp"
+                    android:paddingBottom="7dp"
+                    android:text="  View "
+                    android:textColor="@color/gray_50"
+                    android:textSize="@dimen/textonetwo" />
+
+            </RelativeLayout>
+
+            <View
+                android:id="@+id/line1"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@id/filter"
+                android:layout_marginLeft="@dimen/onefive"
+                android:layout_marginTop="7dp"
+                android:layout_marginRight="@dimen/onefive"
+                android:layout_marginBottom="7dp"
+                android:background="@color/gray_500" />
+
+            <RelativeLayout
+                android:id="@+id/sortDetails"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/line1">
+
+                <TextView
+                    android:id="@+id/modify"
+                    android:layout_width="170dp"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginBottom="@dimen/four"
+                    android:background="@color/gray_50"
+                    android:fontFamily="@font/roboto_regular"
+                    android:gravity="center_horizontal"
+                    android:padding="10dp"
+                    android:text="By Modified time"
+                    android:textAlignment="center"
+                    android:textColor="@color/gray_500"
+                    android:textSize="10sp" />
+
+                <TextView
+                    android:id="@+id/created"
+                    android:layout_width="170dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/modify"
+                    android:layout_centerHorizontal="true"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginBottom="@dimen/four"
+                    android:background="@color/gray_50"
+                    android:fontFamily="@font/roboto_regular"
+                    android:gravity="center_horizontal"
+                    android:padding="10dp"
+                    android:text="  By Created time"
+                    android:textAlignment="center"
+                    android:textColor="@color/gray_500"
+                    android:textSize="10sp" />
+
+
+                <TextView
+                    android:id="@+id/alphabetically"
+                    android:layout_width="170dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/created"
+                    android:layout_centerHorizontal="true"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginBottom="@dimen/four"
+                    android:background="@color/gray_50"
+                    android:fontFamily="@font/roboto_regular"
+                    android:gravity="center_horizontal"
+                    android:padding="10dp"
+                    android:text="Alphabetically"
+                    android:textAlignment="center"
+                    android:textColor="@color/gray_500"
+                    android:textSize="10sp" />
+
+
+                <TextView
+                    android:id="@+id/reminder"
+                    android:layout_width="170dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/alphabetically"
+                    android:layout_centerHorizontal="true"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginBottom="@dimen/onezero"
+                    android:background="@color/gray_50"
+                    android:fontFamily="@font/roboto_regular"
+                    android:gravity="center_horizontal"
+                    android:padding="10dp"
+                    android:text="by reminder time"
+                    android:textAlignment="center"
+                    android:textColor="@color/gray_500"
+                    android:textSize="10sp" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/view_details"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/line1"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/smallList"
+                    android:layout_width="170dp"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginBottom="@dimen/four"
+                    android:background="@color/gray_50"
+                    android:fontFamily="@font/roboto_regular"
+                    android:gravity="center_horizontal"
+                    android:padding="10dp"
+                    android:text="By Modified time"
+                    android:textAlignment="center"
+                    android:textColor="@color/gray_500"
+                    android:textSize="10sp" />
+
+                <TextView
+                    android:id="@+id/detailsList"
+                    android:layout_width="170dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/smallList"
+                    android:layout_centerHorizontal="true"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginBottom="@dimen/four"
+                    android:background="@color/gray_50"
+                    android:fontFamily="@font/roboto_regular"
+                    android:gravity="center_horizontal"
+                    android:padding="10dp"
+                    android:text="  By Created time"
+                    android:textAlignment="center"
+                    android:textColor="@color/gray_500"
+                    android:textSize="10sp" />
+
+
+                <TextView
+                    android:id="@+id/gridList"
+                    android:layout_width="170dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/detailsList"
+                    android:layout_centerHorizontal="true"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginBottom="@dimen/four"
+                    android:background="@color/gray_50"
+                    android:fontFamily="@font/roboto_regular"
+                    android:gravity="center_horizontal"
+                    android:padding="10dp"
+                    android:text="Alphabetically"
+                    android:textAlignment="center"
+                    android:textColor="@color/gray_500"
+                    android:textSize="10sp" />
+
+
+                <TextView
+                    android:id="@+id/gridLargeList"
+                    android:layout_width="170dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/gridList"
+                    android:layout_centerHorizontal="true"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginBottom="@dimen/onezero"
+                    android:background="@color/gray_50"
+                    android:fontFamily="@font/roboto_regular"
+                    android:gravity="center_horizontal"
+                    android:padding="10dp"
+                    android:text="by reminder time"
+                    android:textAlignment="center"
+                    android:textColor="@color/gray_500"
+                    android:textSize="10sp" />
+
+            </RelativeLayout>
+
+
+        </RelativeLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/sortRl"
+            android:layout_marginTop="@dimen/five" />
+
+        <!--FloatingActionButton-->
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/floating_add"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginEnd="@dimen/eight"
+            android:layout_marginBottom="@dimen/eight"
+            android:src="@drawable/add_floating" />
+
+    </RelativeLayout>
+
+</FrameLayout>

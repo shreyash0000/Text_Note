@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:clickable="true"
+    android:layout_margin="@dimen/five"
+    app:cardElevation="@dimen/five"
+    android:id="@+id/cvClick"
+    app:cardCornerRadius="@dimen/one">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/eight"
+        android:layout_marginRight="@dimen/eight">
+
+        <RelativeLayout
+            android:id="@+id/rlDate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tvEditing"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/onezero"
+                android:fontFamily="@font/roboto_regular"
+                android:padding="@dimen/three"
+                android:text="Editing"
+                android:textSize="@dimen/textonezero" />
+
+            <TextView
+                android:id="@+id/tvDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/tvEditing"
+                android:fontFamily="@font/roboto_regular"
+                android:padding="@dimen/three"
+                android:text="Editing"
+                android:textSize="@dimen/textonezero" />
+
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/rlDate"
+            android:maxLines="1"
+            android:singleLine="true"
+            android:layout_marginBottom="@dimen/five"
+            android:ellipsize="end"
+            android:fontFamily="@font/roboto_regular"
+            android:textColor="@color/gray_700"
+            android:textSize="@dimen/textonezero"/>
+
+        <TextView
+            android:id="@+id/tvDescription"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvTitle"
+            android:maxLines="3"
+            android:visibility="gone"
+            android:layout_marginBottom="@dimen/five"
+            android:ellipsize="end"
+            android:fontFamily="@font/roboto_regular"
+            android:textColor="@color/gray_500"
+            android:textSize="@dimen/texteight"/>
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

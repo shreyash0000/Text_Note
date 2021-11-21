@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/gray_700"
+    android:layout_height="50dp">
+
+    <TextView
+        android:id="@+id/action_bar_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/app_name"
+        android:textColor="@color/white"
+        android:fontFamily="@font/roboto_regular"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="@dimen/texteight"
+        android:textSize="@dimen/textonezero"/>
+
+    <SearchView
+        android:id="@+id/ivSearch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:visibility="gone"
+        android:theme="@style/search_color"
+        android:searchIcon="@drawable/ic_search"
+        android:layout_marginEnd="@dimen/five" />
+
+</RelativeLayout>

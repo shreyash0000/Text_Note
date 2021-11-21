@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".screen.EditNoteActivity">
+
+    <RelativeLayout
+        android:id="@+id/header_title"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/gray_700">
+
+        <EditText
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/texteight"
+            android:backgroundTint="@android:color/transparent"
+            android:fontFamily="@font/roboto_regular"
+            android:hint="@string/app_name"
+            android:inputType="text"
+            android:maxWidth="220dp"
+            android:maxLines="1"
+            android:textColor="@color/white"
+            android:textColorHint="@color/gray_500"
+            android:textSize="@dimen/textonezero" />
+
+        <TextView
+            android:id="@+id/save"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="@dimen/eight"
+            android:layout_toLeftOf="@id/showMenu"
+            android:background="@drawable/btn_shape"
+            android:fontFamily="@font/roboto_regular"
+            android:paddingLeft="@dimen/twozero"
+            android:paddingTop="@dimen/eight"
+            android:paddingRight="@dimen/twozero"
+            android:paddingBottom="@dimen/eight"
+            android:text="save"
+            android:textColor="@color/gray_100"
+            android:textSize="@dimen/textonezero" />
+
+        <ImageView
+            android:id="@+id/showMenu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="@dimen/onezero"
+            android:onClick="showMenu"
+            android:src="@drawable/ic_more" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rlDate"
+        android:layout_below="@id/header_title"
+        android:layout_width="match_parent"
+        android:layout_marginLeft="@dimen/eight"
+        android:layout_marginRight="@dimen/eight"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/tvEditing"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/onezero"
+            android:fontFamily="@font/roboto_regular"
+            android:padding="@dimen/three"
+            android:text="Editing"
+            android:textSize="@dimen/textonezero" />
+
+        <TextView
+            android:id="@+id/tvDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/tvEditing"
+            android:fontFamily="@font/roboto_regular"
+            android:padding="@dimen/three"
+            android:text="Editing"
+            android:textSize="@dimen/textonezero" />
+
+
+    </RelativeLayout>
+
+
+    <com.task.note.utils.LinedEditText
+        android:id="@+id/description"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/rlDate"
+        android:layout_marginLeft="@dimen/eight"
+        android:layout_marginTop="@dimen/eight"
+        android:layout_marginRight="@dimen/eight"
+        android:backgroundTint="@android:color/transparent"
+        android:fontFamily="@font/roboto_regular"
+        android:singleLine="false"
+        android:textColor="@color/gray_500"
+        android:textSize="@dimen/textonefour" />
+
+</RelativeLayout>
